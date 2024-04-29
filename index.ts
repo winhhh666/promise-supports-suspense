@@ -21,6 +21,6 @@ function wrapPromise(promise: Promise<any>) {
 }
 
 export default function fetchData(url: string) {
-	promise = axios.get(url).then(res => res.data)
+	const promise = axios.get(url).then(res => res.data)
     return wrapPromise(promise)
 }
